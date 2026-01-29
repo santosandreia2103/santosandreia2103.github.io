@@ -1,59 +1,142 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AKL Fashion & Beauty</title>
+  <title>AKL FASHION&BEAUTY</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
 
-  <!-- TOPO -->
+  <!-- Topbar -->
   <header class="topbar">
-    <div class="wrap topbar-inner">
+    <div class="wrap topbar-grid">
       <div class="brand">
-        <div class="brand-logo" aria-hidden="true"></div>
+        <div class="logo" aria-label="Logo AKL"></div>
+
         <div class="brand-text">
-          <strong>AKL Fashion & Beauty</strong>
-          <span>Conforto, qualidade e praticidade</span>
+          <div class="brand-title">AKL FASHION&BEAUTY</div>
+          <div class="brand-sub">
+            Bem-vinda(o)! <br />
+            Temos peças para todos os momentos, do descanso ao movimento, com conforto, praticidade e confiança.
+            Explore e encontre seu estilo.
+          </div>
         </div>
       </div>
 
-      <a class="btn-whats" target="_blank" rel="noopener"
-         href="https://wa.me/5541997304061?text=Ol%C3%A1!%20Quero%20fazer%20um%20pedido.%20Consulte%20tamanhos%20e%20cores%20dispon%C3%ADveis.">
-        Falar no WhatsApp
-      </a>
+      <div class="top-actions">
+        <div class="search">
+          <input id="searchInput" type="search" placeholder="Buscar por produto" />
+          <button id="searchBtn" class="icon-btn" title="Buscar" aria-label="Buscar">🔎</button>
+        </div>
+        <button class="icon-btn" title="Conta" aria-label="Conta">👤</button>
+        <button class="icon-btn" title="Carrinho" aria-label="Carrinho">🛒</button>
+      </div>
+    </div>
+
+    <div class="wrap chips">
+      <button class="chip active" data-cat="Feminino" type="button">
+        <span class="chip-img">👗</span>
+        <span class="chip-txt">Feminino</span>
+      </button>
+      <button class="chip" data-cat="Infantil" type="button">
+        <span class="chip-img">🧒</span>
+        <span class="chip-txt">Infantil</span>
+      </button>
+      <button class="chip" data-cat="Masculino" type="button">
+        <span class="chip-img">🩳</span>
+        <span class="chip-txt">Masculino</span>
+      </button>
+      <button class="chip" data-cat="Todos" type="button">
+        <span class="chip-img">🛍️</span>
+        <span class="chip-txt">Todos</span>
+      </button>
     </div>
   </header>
 
-  <!-- BANNERS PEQUENOS -->
-  <section class="wrap banners">
-    <article class="banner-card">
-      <img src="banner1.png.png" alt="Banner 1">
+  <!-- 3 banners grandes -->
+  <section class="wrap hero-banners">
+    <article class="hero-card">
+      <img src="banner1.png.png" alt="Banner 1" />
     </article>
-
-    <article class="banner-card">
-      <img src="banner2.png.png" alt="Banner 2">
+    <article class="hero-card">
+      <img src="banner2.png.png" alt="Banner 2" />
     </article>
-
-    <article class="banner-card">
-      <img src="banner3.png.png" alt="Banner 3">
+    <article class="hero-card">
+      <img src="banner3.png.png" alt="Banner 3" />
     </article>
   </section>
 
-  <!-- PRODUTOS -->
-  <main class="wrap">
-    <div class="section-title">
-      <h2>Produtos</h2>
-      <p>Clique em comprar e fale direto pelo WhatsApp.</p>
-    </div>
+  <!-- Conteúdo -->
+  <main class="wrap content">
+    <!-- Sidebar filtros -->
+    <aside class="sidebar">
+      <h2 class="side-title">Produtos</h2>
 
-    <section id="grid-produtos" class="grid"></section>
+      <div class="side-search">
+        <input id="sideSearch" type="search" placeholder="Pesquisar" />
+        <button id="sideSearchBtn" class="icon-btn" aria-label="Pesquisar">🔎</button>
+      </div>
+
+      <nav class="side-links">
+        <button class="link active" data-filter="todos" type="button">Todos produtos</button>
+        <button class="link" data-filter="promo" type="button">Apenas promoções</button>
+      </nav>
+
+      <div class="side-block">
+        <div class="side-block-title">Categorias</div>
+        <label class="check"><input type="checkbox" class="catCheck" value="Feminino" checked /> Feminino</label>
+        <label class="check"><input type="checkbox" class="catCheck" value="Infantil" checked /> Infantil</label>
+        <label class="check"><input type="checkbox" class="catCheck" value="Masculino" checked /> Masculino</label>
+      </div>
+
+      <div class="side-block">
+        <div class="side-block-title">Marcas</div>
+        <label class="check"><input type="checkbox" class="brandCheck" value="Euro" checked /> Euro</label>
+        <label class="check"><input type="checkbox" class="brandCheck" value="Romance" checked /> Romance</label>
+      </div>
+
+      <div class="side-block">
+        <div class="side-block-title">Valor</div>
+        <div class="price-row">
+          <input id="minPrice" type="number" placeholder="Mínimo" />
+          <input id="maxPrice" type="number" placeholder="Máximo" />
+        </div>
+        <button id="applyFilters" class="btn-gray" type="button">Filtrar</button>
+        <button id="clearFilters" class="btn-link" type="button">Limpar filtros</button>
+      </div>
+    </aside>
+
+    <!-- Lista -->
+    <section class="list">
+      <div class="list-top">
+        <div>
+          <div class="list-title">Produtos</div>
+          <div class="list-sub"><span id="countProducts">0</span> produtos</div>
+        </div>
+
+        <div class="sort">
+          <label for="sortSelect">Ordenar por</label>
+          <select id="sortSelect">
+            <option value="relevantes">relevantes</option>
+            <option value="menor_preco">menor preço</option>
+            <option value="maior_preco">maior preço</option>
+            <option value="maior_desconto">maior desconto</option>
+          </select>
+        </div>
+      </div>
+
+      <div id="grid" class="grid"></div>
+    </section>
   </main>
 
-  <!-- RODAPÉ -->
+  <!-- Whats flutuante -->
+  <a class="whats-float" target="_blank" rel="noopener"
+     href="https://wa.me/5541997304061?text=Ol%C3%A1!%20Quero%20fazer%20um%20pedido.%20Consulte%20tamanhos%20e%20cores%20dispon%C3%ADveis."
+     aria-label="WhatsApp">
+    🟢
+  </a>
+
   <footer class="footer">
     <div class="wrap footer-inner">
       <p>© AKL Fashion & Beauty - Todos os direitos reservados</p>

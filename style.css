@@ -12,19 +12,12 @@ body {
 
 /* BANNER */
 .banner {
-  background: #111;
-  color: white;
-  text-align: center;
-  padding: 50px 20px;
-}
-
-.banner h1 {
-  font-size: 32px;
-}
-
-.banner p {
-  margin-top: 10px;
-  font-size: 18px;
+  background-image: url("banner.png.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-color: #ffffff;
+  padding: 110px 20px;
 }
 
 /* SOBRE */

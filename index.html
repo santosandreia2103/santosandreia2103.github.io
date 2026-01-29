@@ -1,89 +1,119 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AKL Fashion & Beauty</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
 
-  <!-- BANNER -->
-  <header class="banner"></header>
+  <!-- HEADER / BANNER -->
+  <header class="topo">
+    <div class="banner"></div>
+
+    <div class="topo-texto">
+      <h1>AKL Fashion & Beauty</h1>
+      <p>Conforto, estilo e qualidade em cada detalhe.</p>
+      <a class="btn-principal" href="#produtos">Ver produtos</a>
+    </div>
+  </header>
 
   <!-- SOBRE -->
-  <section class="sobre">
-    <p>
-      Nossa loja oferece roupas adultas e infantis com foco em conforto,
-      qualidade e bom gosto, pensadas para o dia a dia de toda a família.
-    </p>
-  </section>
-
-  <!-- ================= LINGERIES ================= -->
-  <section class="categoria">
-    <h2>Lingeries</h2>
-    <div class="produtos">
-
-      <div class="produto">
-        <img src="https://via.placeholder.com/400x400.png?text=Lingerie" alt="Lingerie">
-        <h3>Lingerie renda preta</h3>
-        <span>R$ 49,90</span>
-        <a href="https://wa.me/5541997304061?text=Ol%C3%A1!%20Quero%20comprar%20a%20Lingerie%20renda%20preta%20por%20R%24%2049%2C90.%20Consulte%20tamanhos%20e%20cores%20dispon%C3%ADveis."
-           target="_blank">COMPRAR</a>
-      </div>
-
+  <section class="container">
+    <div class="sobre">
+      <h2>Sobre a loja</h2>
+      <p>
+        Nossa loja oferece roupas e acessórios com foco em conforto,
+        qualidade e bom gosto, pensadas para o dia a dia.
+      </p>
     </div>
   </section>
 
-  <!-- ================= CUECAS ================= -->
-  <section class="categoria">
-    <h2>Cuecas</h2>
-    <div class="produtos">
+  <!-- PRODUTOS -->
+  <main class="container" id="produtos">
 
-      <div class="produto">
-        <img src="https://via.placeholder.com/400x400.png?text=Cueca" alt="Cueca">
-        <h3>Cueca algodão</h3>
-        <span>R$ 29,90</span>
-        <a href="https://wa.me/5541997304061?text=Ol%C3%A1!%20Quero%20comprar%20a%20Cueca%20algod%C3%A3o%20por%20R%24%2029%2C90.%20Consulte%20tamanhos%20e%20cores%20dispon%C3%ADveis."
-           target="_blank">COMPRAR</a>
+    <!-- ================= LINGERIES ================= -->
+    <section class="categoria">
+      <div class="categoria-topo">
+        <h2>Lingeries</h2>
       </div>
 
-    </div>
-  </section>
+      <div class="produtos">
+        <div class="produto">
+          <img src="https://via.placeholder.com/500x500.png?text=Lingerie" alt="Lingerie">
+          <h3>Lingerie renda preta</h3>
+          <span class="preco">R$ 49,90</span>
+          <a class="btn-comprar"
+             href="https://wa.me/5541997304061?text=Ol%C3%A1!%20Quero%20comprar%20a%20Lingerie%20renda%20preta%20por%20R%24%2049%2C90.%20Consulte%20tamanhos%20e%20cores%20dispon%C3%ADveis."
+             target="_blank" rel="noopener">Comprar no WhatsApp</a>
+        </div>
+      </div>
+    </section>
 
-  <!-- ================= MEIAS ================= -->
-  <section class="categoria">
-    <h2>Meias</h2>
-    <div class="produtos"></div>
-  </section>
+    <!-- ================= CUECAS ================= -->
+    <section class="categoria">
+      <div class="categoria-topo">
+        <h2>Cuecas</h2>
+      </div>
 
-  <!-- ================= LEGGINGS ================= -->
-  <section class="categoria">
-    <h2>Leggings</h2>
-    <div class="produtos"></div>
-  </section>
+      <div class="produtos">
+        <div class="produto">
+          <img src="https://via.placeholder.com/500x500.png?text=Cueca" alt="Cueca">
+          <h3>Cueca algodão</h3>
+          <span class="preco">R$ 29,90</span>
+          <a class="btn-comprar"
+             href="https://wa.me/5541997304061?text=Ol%C3%A1!%20Quero%20comprar%20a%20Cueca%20algod%C3%A3o%20por%20R%24%2029%2C90.%20Consulte%20tamanhos%20e%20cores%20dispon%C3%ADveis."
+             target="_blank" rel="noopener">Comprar no WhatsApp</a>
+        </div>
+      </div>
+    </section>
 
-  <!-- ================= TOPS ================= -->
-  <section class="categoria">
-    <h2>Tops</h2>
-    <div class="produtos"></div>
-  </section>
+    <!-- ================= MEIAS ================= -->
+    <section class="categoria">
+      <div class="categoria-topo">
+        <h2>Meias</h2>
+      </div>
+      <div class="produtos"></div>
+    </section>
 
-  <!-- ================= PIJAMAS ADULTO ================= -->
-  <section class="categoria">
-    <h2>Pijamas Adulto</h2>
-    <div class="produtos"></div>
-  </section>
+    <!-- ================= LEGGINGS ================= -->
+    <section class="categoria">
+      <div class="categoria-topo">
+        <h2>Leggings</h2>
+      </div>
+      <div class="produtos"></div>
+    </section>
 
-  <!-- ================= PIJAMAS INFANTIL ================= -->
-  <section class="categoria">
-    <h2>Pijamas Infantil</h2>
-    <div class="produtos"></div>
-  </section>
+    <!-- ================= TOPS ================= -->
+    <section class="categoria">
+      <div class="categoria-topo">
+        <h2>Tops</h2>
+      </div>
+      <div class="produtos"></div>
+    </section>
+
+    <!-- ================= PIJAMAS ADULTO ================= -->
+    <section class="categoria">
+      <div class="categoria-topo">
+        <h2>Pijamas Adulto</h2>
+      </div>
+      <div class="produtos"></div>
+    </section>
+
+    <!-- ================= PIJAMAS INFANTIL ================= -->
+    <section class="categoria">
+      <div class="categoria-topo">
+        <h2>Pijamas Infantil</h2>
+      </div>
+      <div class="produtos"></div>
+    </section>
+
+  </main>
 
   <!-- RODAPÉ -->
-  <footer>
+  <footer class="rodape">
     <p>© AKL Fashion & Beauty - Todos os direitos reservados</p>
   </footer>
 
